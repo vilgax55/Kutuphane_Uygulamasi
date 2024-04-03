@@ -43,6 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.KitapDgv = new System.Windows.Forms.DataGridView();
+            this.btnSil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KitapDgv)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 51);
+            this.label1.Location = new System.Drawing.Point(117, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 0;
@@ -59,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 99);
+            this.label2.Location = new System.Drawing.Point(122, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 1;
@@ -68,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 154);
+            this.label3.Location = new System.Drawing.Point(113, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 2;
@@ -80,6 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.btnKitapKaydet);
             this.groupBox1.Controls.Add(this.btnKitapEkle);
             this.groupBox1.Controls.Add(this.btnKitapYükle);
@@ -94,20 +96,21 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 53);
+            this.groupBox1.Location = new System.Drawing.Point(26, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 398);
+            this.groupBox1.Size = new System.Drawing.Size(542, 494);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ekleme";
             // 
             // btnKitapKaydet
             // 
-            this.btnKitapKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnKitapKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKitapKaydet.Location = new System.Drawing.Point(154, 354);
+            this.btnKitapKaydet.Location = new System.Drawing.Point(343, 354);
             this.btnKitapKaydet.Name = "btnKitapKaydet";
-            this.btnKitapKaydet.Size = new System.Drawing.Size(87, 44);
+            this.btnKitapKaydet.Size = new System.Drawing.Size(128, 44);
             this.btnKitapKaydet.TabIndex = 6;
             this.btnKitapKaydet.Text = "kaydet";
             this.btnKitapKaydet.UseVisualStyleBackColor = true;
@@ -115,11 +118,12 @@
             // 
             // btnKitapEkle
             // 
-            this.btnKitapEkle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnKitapEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKitapEkle.Location = new System.Drawing.Point(0, 354);
+            this.btnKitapEkle.Location = new System.Drawing.Point(52, 354);
             this.btnKitapEkle.Name = "btnKitapEkle";
-            this.btnKitapEkle.Size = new System.Drawing.Size(103, 44);
+            this.btnKitapEkle.Size = new System.Drawing.Size(134, 44);
             this.btnKitapEkle.TabIndex = 6;
             this.btnKitapEkle.Text = "ekle";
             this.btnKitapEkle.UseVisualStyleBackColor = true;
@@ -127,11 +131,12 @@
             // 
             // btnKitapYükle
             // 
-            this.btnKitapYükle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnKitapYükle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKitapYükle.Location = new System.Drawing.Point(275, 354);
+            this.btnKitapYükle.Location = new System.Drawing.Point(343, 430);
             this.btnKitapYükle.Name = "btnKitapYükle";
-            this.btnKitapYükle.Size = new System.Drawing.Size(103, 44);
+            this.btnKitapYükle.Size = new System.Drawing.Size(134, 44);
             this.btnKitapYükle.TabIndex = 6;
             this.btnKitapYükle.Text = "yükle";
             this.btnKitapYükle.UseVisualStyleBackColor = true;
@@ -139,35 +144,35 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(145, 250);
+            this.txtID.Location = new System.Drawing.Point(220, 270);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(176, 27);
             this.txtID.TabIndex = 5;
             // 
             // txtTuru
             // 
-            this.txtTuru.Location = new System.Drawing.Point(145, 198);
+            this.txtTuru.Location = new System.Drawing.Point(220, 218);
             this.txtTuru.Name = "txtTuru";
             this.txtTuru.Size = new System.Drawing.Size(176, 27);
             this.txtTuru.TabIndex = 5;
             // 
             // txtBasımYılı
             // 
-            this.txtBasımYılı.Location = new System.Drawing.Point(145, 147);
+            this.txtBasımYılı.Location = new System.Drawing.Point(220, 167);
             this.txtBasımYılı.Name = "txtBasımYılı";
             this.txtBasımYılı.Size = new System.Drawing.Size(176, 27);
             this.txtBasımYılı.TabIndex = 5;
             // 
             // txtKitapAdı
             // 
-            this.txtKitapAdı.Location = new System.Drawing.Point(145, 92);
+            this.txtKitapAdı.Location = new System.Drawing.Point(220, 112);
             this.txtKitapAdı.Name = "txtKitapAdı";
             this.txtKitapAdı.Size = new System.Drawing.Size(176, 27);
             this.txtKitapAdı.TabIndex = 5;
             // 
             // txtYazarAd
             // 
-            this.txtYazarAd.Location = new System.Drawing.Point(145, 44);
+            this.txtYazarAd.Location = new System.Drawing.Point(220, 64);
             this.txtYazarAd.Name = "txtYazarAd";
             this.txtYazarAd.Size = new System.Drawing.Size(176, 27);
             this.txtYazarAd.TabIndex = 5;
@@ -175,7 +180,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(85, 205);
+            this.label8.Location = new System.Drawing.Point(160, 225);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 4;
@@ -184,7 +189,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(104, 257);
+            this.label7.Location = new System.Drawing.Point(179, 277);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 20);
             this.label7.TabIndex = 3;
@@ -192,20 +197,34 @@
             // 
             // KitapDgv
             // 
+            this.KitapDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.KitapDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KitapDgv.Location = new System.Drawing.Point(459, 13);
+            this.KitapDgv.Location = new System.Drawing.Point(603, 26);
             this.KitapDgv.Name = "KitapDgv";
             this.KitapDgv.RowHeadersWidth = 51;
             this.KitapDgv.RowTemplate.Height = 24;
             this.KitapDgv.Size = new System.Drawing.Size(654, 503);
             this.KitapDgv.TabIndex = 4;
             // 
+            // btnSil
+            // 
+            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSil.Location = new System.Drawing.Point(52, 433);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(134, 41);
+            this.btnSil.TabIndex = 7;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // KitapİslemleriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1125, 528);
+            this.ClientSize = new System.Drawing.Size(1289, 624);
             this.Controls.Add(this.KitapDgv);
             this.Controls.Add(this.groupBox1);
             this.Name = "KitapİslemleriForm";
@@ -234,5 +253,6 @@
         private System.Windows.Forms.Button btnKitapKaydet;
         private System.Windows.Forms.Button btnKitapEkle;
         private System.Windows.Forms.DataGridView KitapDgv;
+        private System.Windows.Forms.Button btnSil;
     }
 }

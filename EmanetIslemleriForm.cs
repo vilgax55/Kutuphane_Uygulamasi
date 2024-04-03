@@ -3,34 +3,44 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace Kütüphane_Uygulaması
 {
     public partial class EmanetIslemleriForm : Form
     {
-        private DataTable dt;
-        private List<Emanet> Emanetler;
+        private BindingList<Emanet> Emanetler;
+
         public EmanetIslemleriForm()
         {
             InitializeComponent();
-            Emanetler = new List<Emanet>();
-            dt = new DataTable();
-
-            dt.Columns.Add("Kitap ID :");
-            dt.Columns.Add("Son Tarih:");
-            dt.Columns.Add("TC: ");
-            EmanetDgv.DataSource = dt;
-
+            Emanetler = new BindingList<Emanet>();
+            EmanetDgv.DataSource = Emanetler;
         }
-        private void btnEmanetiVerme_Click(object sender, EventArgs e)
+
+        private void TsmYükle_Click(object sender, EventArgs e)
         {
-            // Giriş alanlarının boş olup olmadığını kontrol ediyoruz
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JSON Dosyası|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string data = File.ReadAllText(dialog.FileName);
+                Emanetler = JsonSerializer.Deserialize<BindingList<Emanet>>(data);
+
+
+                EmanetDgv.DataSource = null;
+                EmanetDgv.DataSource = Emanetler;
+            }
+        }
+
+        private void btnEmanetVerme_Click(object sender, EventArgs e)
+        {
+
             if (string.IsNullOrWhiteSpace(txtKitapID.Text) ||
                 string.IsNullOrWhiteSpace(txtSonTarih.Text) ||
                 string.IsNullOrWhiteSpace(txtAlanTc.Text))
@@ -43,7 +53,8 @@ namespace Kütüphane_Uygulaması
             emanet.kitapID = Convert.ToDouble(txtKitapID.Text);
             emanet.SonTarih = Convert.ToDouble(txtSonTarih.Text);
             emanet.Tc = Convert.ToDouble(txtAlanTc.Text);
-            emanet.TabloyaEkle(dt);
+
+
             Emanetler.Add(emanet);
 
             txtKitapID.Text = "";
@@ -59,7 +70,7 @@ namespace Kütüphane_Uygulaması
                 return;
             }
 
-            string yazilacak = JsonSerializer.Serialize<List<Emanet>>(Emanetler);
+            string yazilacak = JsonSerializer.Serialize<BindingList<Emanet>>(Emanetler);
 
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "JSON Dosyası|*.json";
@@ -70,20 +81,48 @@ namespace Kütüphane_Uygulaması
             }
         }
 
-        private void TsmYükle_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "JSON Dosyası|*.json";
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                string data = File.ReadAllText(dialog.FileName);
-                Emanetler = JsonSerializer.Deserialize<List<Emanet>>(data);
+ 
 
-                foreach (Emanet emanet in Emanetler)
-                {
-                    emanet.TabloyaEkle(dt);
-                }
+        private void EmanetDgv_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = EmanetDgv.Rows[rowIndex];
+
+            double kitapID;
+            if (!double.TryParse(row.Cells["KitapID"].Value?.ToString(), out kitapID))
+            {
+                MessageBox.Show("Geçersiz kitap ID'si.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            double sonTarih;
+            if (!double.TryParse(row.Cells["SonTarih"].Value?.ToString(), out sonTarih))
+            {
+                MessageBox.Show("Geçersiz son tarih.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double tc;
+            if (!double.TryParse(row.Cells["TC"].Value?.ToString(), out tc))
+            {
+                MessageBox.Show("Geçersiz TC numarası.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var updatedEmanet = Emanetler.FirstOrDefault(em => em.Tc == tc);
+
+            if (updatedEmanet != null)
+            {
+                updatedEmanet.kitapID = kitapID;
+                updatedEmanet.SonTarih = sonTarih;
+            }
+        }
+
+
+        private void btnGuncelleKaydet_Click(object sender, EventArgs e)
+        {
+            EmanetDgv.EndEdit();
+            TsmKaydet_Click(sender, e);
         }
     }
 }

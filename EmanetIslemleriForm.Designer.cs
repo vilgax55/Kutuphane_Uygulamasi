@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtKitapID = new System.Windows.Forms.TextBox();
             this.txtAlanTc = new System.Windows.Forms.TextBox();
-            this.btnEmanetiVerme = new System.Windows.Forms.Button();
+            this.btnEmanetVerme = new System.Windows.Forms.Button();
             this.EmanetDgv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TsmDosya = new System.Windows.Forms.ToolStripSplitButton();
@@ -54,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 89);
+            this.label1.Location = new System.Drawing.Point(140, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 205);
+            this.label2.Location = new System.Drawing.Point(184, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 20);
             this.label2.TabIndex = 1;
@@ -83,13 +83,13 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtKitapID);
             this.groupBox1.Controls.Add(this.txtAlanTc);
-            this.groupBox1.Controls.Add(this.btnEmanetiVerme);
+            this.groupBox1.Controls.Add(this.btnEmanetVerme);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(0, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 361);
+            this.groupBox1.Size = new System.Drawing.Size(627, 409);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Emanet Verme";
@@ -99,9 +99,9 @@
             this.txtSonTarih.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSonTarih.Location = new System.Drawing.Point(148, 143);
+            this.txtSonTarih.Location = new System.Drawing.Point(243, 159);
             this.txtSonTarih.Name = "txtSonTarih";
-            this.txtSonTarih.Size = new System.Drawing.Size(211, 27);
+            this.txtSonTarih.Size = new System.Drawing.Size(174, 27);
             this.txtSonTarih.TabIndex = 6;
             // 
             // label4
@@ -121,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 142);
+            this.label3.Location = new System.Drawing.Point(127, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 5;
@@ -132,9 +132,9 @@
             this.txtKitapID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKitapID.Location = new System.Drawing.Point(148, 86);
+            this.txtKitapID.Location = new System.Drawing.Point(243, 102);
             this.txtKitapID.Name = "txtKitapID";
-            this.txtKitapID.Size = new System.Drawing.Size(211, 27);
+            this.txtKitapID.Size = new System.Drawing.Size(174, 27);
             this.txtKitapID.TabIndex = 3;
             // 
             // txtAlanTc
@@ -142,33 +142,33 @@
             this.txtAlanTc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAlanTc.Location = new System.Drawing.Point(148, 202);
+            this.txtAlanTc.Location = new System.Drawing.Point(243, 218);
             this.txtAlanTc.Name = "txtAlanTc";
-            this.txtAlanTc.Size = new System.Drawing.Size(211, 27);
+            this.txtAlanTc.Size = new System.Drawing.Size(174, 27);
             this.txtAlanTc.TabIndex = 4;
             // 
-            // btnEmanetiVerme
+            // btnEmanetVerme
             // 
-            this.btnEmanetiVerme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEmanetVerme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEmanetiVerme.BackColor = System.Drawing.Color.LightBlue;
-            this.btnEmanetiVerme.Location = new System.Drawing.Point(220, 288);
-            this.btnEmanetiVerme.Name = "btnEmanetiVerme";
-            this.btnEmanetiVerme.Size = new System.Drawing.Size(174, 67);
-            this.btnEmanetiVerme.TabIndex = 2;
-            this.btnEmanetiVerme.Text = "Emaneti Ver";
-            this.btnEmanetiVerme.UseVisualStyleBackColor = false;
-            this.btnEmanetiVerme.Click += new System.EventHandler(this.btnEmanetiVerme_Click);
+            this.btnEmanetVerme.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEmanetVerme.Location = new System.Drawing.Point(243, 340);
+            this.btnEmanetVerme.Name = "btnEmanetVerme";
+            this.btnEmanetVerme.Size = new System.Drawing.Size(135, 52);
+            this.btnEmanetVerme.TabIndex = 2;
+            this.btnEmanetVerme.Text = "Emaneti Ver";
+            this.btnEmanetVerme.UseVisualStyleBackColor = false;
+            this.btnEmanetVerme.Click += new System.EventHandler(this.btnEmanetVerme_Click);
             // 
             // EmanetDgv
             // 
             this.EmanetDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmanetDgv.Location = new System.Drawing.Point(401, 82);
+            this.EmanetDgv.Location = new System.Drawing.Point(633, 82);
             this.EmanetDgv.Name = "EmanetDgv";
             this.EmanetDgv.RowHeadersWidth = 51;
             this.EmanetDgv.RowTemplate.Height = 24;
-            this.EmanetDgv.Size = new System.Drawing.Size(580, 502);
+            this.EmanetDgv.Size = new System.Drawing.Size(664, 409);
             this.EmanetDgv.TabIndex = 3;
             // 
             // toolStrip1
@@ -179,7 +179,7 @@
             this.TsmDosya});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(981, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1309, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -200,14 +200,14 @@
             // TsmKaydet
             // 
             this.TsmKaydet.Name = "TsmKaydet";
-            this.TsmKaydet.Size = new System.Drawing.Size(224, 26);
+            this.TsmKaydet.Size = new System.Drawing.Size(138, 26);
             this.TsmKaydet.Text = "Kaydet";
             this.TsmKaydet.Click += new System.EventHandler(this.TsmKaydet_Click);
             // 
             // TsmYükle
             // 
             this.TsmYükle.Name = "TsmYükle";
-            this.TsmYükle.Size = new System.Drawing.Size(224, 26);
+            this.TsmYükle.Size = new System.Drawing.Size(138, 26);
             this.TsmYükle.Text = "Yükle";
             this.TsmYükle.Click += new System.EventHandler(this.TsmYükle_Click);
             // 
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(981, 596);
+            this.ClientSize = new System.Drawing.Size(1309, 644);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.EmanetDgv);
             this.Controls.Add(this.groupBox1);
@@ -239,7 +239,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtKitapID;
         private System.Windows.Forms.TextBox txtAlanTc;
-        private System.Windows.Forms.Button btnEmanetiVerme;
+        private System.Windows.Forms.Button btnEmanetVerme;
         private System.Windows.Forms.TextBox txtSonTarih;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

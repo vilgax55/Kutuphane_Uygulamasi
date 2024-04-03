@@ -98,9 +98,9 @@
             // btnUyeEkle
             // 
             this.btnUyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUyeEkle.Location = new System.Drawing.Point(161, 100);
+            this.btnUyeEkle.Location = new System.Drawing.Point(162, 94);
             this.btnUyeEkle.Name = "btnUyeEkle";
-            this.btnUyeEkle.Size = new System.Drawing.Size(93, 33);
+            this.btnUyeEkle.Size = new System.Drawing.Size(142, 33);
             this.btnUyeEkle.TabIndex = 1;
             this.btnUyeEkle.Text = "Üye Ekle";
             this.btnUyeEkle.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(20, 106);
+            this.label3.Location = new System.Drawing.Point(21, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 0;

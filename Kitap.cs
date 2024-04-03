@@ -16,16 +16,16 @@ namespace Kütüphane_Uygulaması
         private string _KitapTur;
         private double _ID;
 
+        //public string KitapAdi { get; set; }
+        //public string YazarAdi { get; set; }
+        //public string KitapTuru { get; set; }
+        //public int BasimYili { get; set; }
+
         public string YazarAd
         {
             get { return _YazarAd; }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                {
-                    MessageBox.Show("Yazar adı girilmelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
                 {
                     _YazarAd = value;
                 }
@@ -35,17 +35,8 @@ namespace Kütüphane_Uygulaması
         public string KitapAd
         {
             get { return _KitapAd; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    MessageBox.Show("Kitap adı girilmelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    _KitapAd = value;
-                }
-            }
+            set { _KitapAd = value; }
+              
         }
 
         public double BasimYil
